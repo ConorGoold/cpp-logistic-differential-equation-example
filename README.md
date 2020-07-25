@@ -6,3 +6,9 @@ To build:
 make
 ./logistic
 ```
+
+To clean: 
+
+```
+make clean
+```
