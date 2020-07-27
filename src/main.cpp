@@ -86,13 +86,25 @@ int main(int argc, char* argv[])
 
      std::string data_file = "data/data.txt";
      double epsilon;
+     double y0;
+     double dt;
+     int n_ts;
      std::cout << "What degree of error do you need? ";
      std::cin >> epsilon;
      std::cout << std::endl;
-     double dt = 0.1;
-     int n_ts = 100;
-     double y0 = 10;
 
+     // ask user to enter the parameters
+     std::cout << "How many simulations do you want? ";
+     std::cin >> n_ts;
+     std::cout << std::endl;
+     std::cout << "Enter the initial population size: ";
+     std::cin >> y0;
+     std::cout << std::endl;
+     std::cout << "Enter the integration interval: ";
+     std::cin >> dt;
+     std::cout << std::endl;
+  
+      
      // run the rejection algorithm    
      ABC_reject(n_particles, data_file, epsilon, r_estimates, K_estimates, dt, n_ts, y0);    
 

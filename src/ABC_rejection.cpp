@@ -51,7 +51,7 @@ void ABC_reject(int& n_particles, std::string data_file, double epsilon,
     std::cin >> K_sigma;
     std::cout << std::endl;
 
-    while((signed)r_particles.size() < n_particles){
+    while((signed)r_particles.size() < n_particles-1){
       // sample parameters from the priors
       double r_star = rnormal(1, r_mu, r_sigma); 
       double K_star = rnormal(1, K_mu, K_sigma);       
